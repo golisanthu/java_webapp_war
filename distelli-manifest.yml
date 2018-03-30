@@ -1,0 +1,16 @@
+ipcrm/java_webapp_war:
+  PreBuild:
+    - mvn -B dependency:go-offline
+  Build:
+    - mvn -B clean package
+  PkgInclude:
+    - 'target/java-webapp.war'
+  PreInstall:
+    - sudo puppet agent -t
+  PostInstall:
+    - source ~/virtualenv/puppet_webapp/bin/activate
+    - pip install dist/*
+    - pip install gunicorn
+    - cp target/java-webapp.war /opt/apache-tomcat8/webapps/
+  Exec:
+    - /opt/apache-tomcat8/bin/catalina.sh run
