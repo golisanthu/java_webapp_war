@@ -1,4 +1,4 @@
-package com.puppet.sample.langs;
+package com.puppet.sample;
 
 public class Polyglot
 {

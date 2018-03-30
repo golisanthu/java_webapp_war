@@ -1,5 +1,5 @@
 package com.puppet.sample;
-import com.puppet.sample.langs.Polyglot;
+import com.puppet.sample.Polyglot;
 
 import spark.ModelAndView;
 import spark.Request;
@@ -16,6 +16,13 @@ import static spark.Spark.before;
 
 public class App implements SparkApplication
 {
+  private static String requestInfoToString(Request request) {
+    StringBuilder sb = new StringBuilder();
+    sb.append(request.requestMethod());
+    sb.append(" " + request.url());
+    sb.append(" " + request.body());
+    return sb.toString();
+  }
 
   public static void main(String[] args) {
     new App().init();
@@ -23,9 +30,14 @@ public class App implements SparkApplication
 
   @Override
   public void init() {
+
+    before((request, response) -> {
+        System.out.println(requestInfoToString(request));
+    });
+
     get("/", (request, response) -> {
       String urlpath = request.url().replaceAll("/[A-z][A-z]$", "");
-      response.redirect(urlpath + "/en");
+      response.redirect(urlpath + "en");
       return null;
     });
 
