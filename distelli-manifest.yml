@@ -12,5 +12,4 @@ ipcrm/java_webapp_war:
   PostInstall:
     - sudo cp target/java-webapp.war /opt/apache-tomcat8/webapps/
   Exec:
-    - export JAVA_HOME=$JAVA_HOME
     - sudo -E /opt/apache-tomcat8/bin/catalina.sh run
