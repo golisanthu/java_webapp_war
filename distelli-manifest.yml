@@ -6,7 +6,7 @@ ipcrm/java_webapp_war:
   PkgInclude:
     - 'target/java-webapp.war'
   PreInstall:
-    - sudo puppet agent -t
+    - sudo /opt/puppetlabs/bin/puppet agent -t
   PostInstall:
     - sudo cp target/java-webapp.war /opt/apache-tomcat8/webapps/
   Exec:
