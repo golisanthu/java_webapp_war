@@ -7,26 +7,26 @@ public class PolyglotTest
 {
     @Test
     public void testEnMsg() {
-        assertEquals("Hello World!", new Polyglot().enMsg());
+        assertEquals("Well Come To My Tomcat Server!", new Polyglot().enMsg());
     }
 
     @Test
     public void testZhMsg() {
-        assertEquals("你好，世界!", new Polyglot().zhMsg());
+        assertEquals("欢迎来到我的 Tomcat 服务器!", new Polyglot().chMsg());
     }
 
     @Test
     public void testSpMsg() {
-        assertEquals("¡Hola Mundo!", new Polyglot().spMsg());
+        assertEquals("Bienvenido a mi servidor Tomcat!", new Polyglot().spMsg());
     }
 
     @Test
     public void testHiMsg() {
-        assertEquals("नमस्ते दुनिया!", new Polyglot().hiMsg());
+        assertEquals("मेरे टॉमकैट सर्वर में आपका स्वागत है!", new Polyglot().hiMsg());
     }
 
     @Test
     public void testArMsg() {
-        assertEquals("مرحبا بالعالم!", new Polyglot().arMsg());
+        assertEquals("నా టామ్‌క్యాట్ సర్వర్‌కు స్వాగతం!", new Polyglot().tlMsg());
     }
 }
