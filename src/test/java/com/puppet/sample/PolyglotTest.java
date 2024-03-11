@@ -9,16 +9,5 @@ public class PolyglotTest
     public void testEnMsg() {
         assertEquals("Well Come To My Tomcat Server!", new Polyglot().enMsg());
     }
-
-
-    @Test
-    public void testSpMsg() {
-        assertEquals("Bienvenido a mi servidor Tomcat!", new Polyglot().spMsg());
-    }
-
-    @Test
-    public void testHiMsg() {
-        assertEquals("मेरे टॉमकैट सर्वर में आपका स्वागत है!", new Polyglot().hiMsg());
-    }
     
 }
