@@ -12,7 +12,7 @@ public class PolyglotTest
 
     @Test
     public void testZhMsg() {
-        assertEquals("欢迎来到我的 Tomcat 服务器!", new Polyglot().chMsg());
+        assertEquals("Selamat Datang di Server Tomcat Saya!", new Polyglot().indonesianMsg());
     }
 
     @Test
@@ -27,6 +27,6 @@ public class PolyglotTest
 
     @Test
     public void testArMsg() {
-        assertEquals("నా టామ్‌క్యాట్ సర్వర్‌కు స్వాగతం!", new Polyglot().tlMsg());
+        assertEquals("నా టామ్‌క్యాట్ సర్వర్‌కు స్వాగతం!", new Polyglot().teluguMsg());
     }
 }
