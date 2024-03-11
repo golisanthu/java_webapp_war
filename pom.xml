@@ -59,8 +59,8 @@
     <plugins>
       <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.8.4</version>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.4.0</version>
           <configuration>
               <archive>
                   <manifest>
